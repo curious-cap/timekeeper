@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "dev":"pnpx nx run many --target=serve --projects frontend --parallel"
+    "dev":"pnpx nx run many --target=serve --projects frontend api --parallel"
   },
   "private": true,
   "dependencies": {
