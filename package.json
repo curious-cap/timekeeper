@@ -2,7 +2,9 @@
   "name": "@timekeeper/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "dev":"pnpx nx run many --target=serve --projects frontend --parallel"
+  },
   "private": true,
   "dependencies": {
     "react": "18.2.0",
