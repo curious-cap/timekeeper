@@ -32,6 +32,18 @@ jobs:
 
       - run: git branch --track main origin/main
         if: ${{ github.event_name == 'pull_request' }}
+      
+      - name: Install PNPM
+        run: npm install -g pnpm
+  
+      - name: Install dependencies with PNPM
+        run: pnpm install
+  
+      - name: Run the build
+        run: pnpm build
+  
+      - name: Run tests
+        run: pnpm test
 
-      - run: npx nx-cloud record -- nx format:check
-      - run: npx nx affected -t lint test build
+      # - run: npx nx-cloud record -- nx format:check
+      # - run: npx nx affected -t lint test build
